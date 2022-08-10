@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See++</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="script.js" charset="utf-8"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --box-height: 400px;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+        body {
+            margin: 0;
+            background: rgb(255, 255, 255);
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 800;
+        }
+
+
+        header {
+            background: #17a2b8;
+            height: 90px;
+        }
+
+        .header-div {
+            position: relative;
+            top: 9px;
+        }
+
+        header::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .logo {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        nav {
+            float: right;
+            padding-right: 120px;
+            position: relative;
+            top: 2px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 70px;
+            padding-top: 23px;
+
+            position: relative;
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: rgb(31, 194, 167);
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: rgb(239, 239, 239);
+
+            position: absolute;
+            top: 0;
+            width: 0%;
+
+            transition: all ease-in-out 250ms;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        .nav-effect:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .company-name {
+            display: inline;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            color: #ffffff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        .pictureAndInfo {
+            display: inline;
+
+        }
+
+ 
+
+        .middle-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(197, 255, 236);
+
+        }
+
+        .info {
+            text-align: left;
+            margin-left: 60px;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40px;
+        }
+
+        .btn-form {
+            position: relative;
+
+
+        }
+
+        .btn-style {
+            padding-top: 7px;
+            font-size: 20px;
+            height: 45px;
+            text-align: center;
+            margin-left: 200px;
+        }
+
+        .wake-up {
+            font-size: 70px;
+            color: #17a2b8;
+        }
+
+        .quote {
+            font-size: 20px;
+        }
+
+        .space {
+            padding: 80px
+        }
+
+        .plane-picture {
+            position: relative;
+            margin-right: 0px;
+        }
+
+        #form-div {
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .sign-title {
+            text-align: center;
+        }
+
+        .submit-btn {
+            position: relative;
+
+        }
+
+        .mario-img{
+            clip-path: circle();
+        }
+
+        .graxinha-img{
+            clip-path: circle()
+        }
+
+        .felipe-img{
+            clip-path: circle();
+        }
+
+        /* TEST */
+
+        .review-title{
+            position: relative;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 60px;
+            color: #17a2b8;
+            margin-top: 30px;
+            top: 40px;
+        }
+
+        .info-left {
+            text-align: left;
+            margin-left: 60px;
+            margin-top: 100px;
+            margin-bottom: 70px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40px;
+        }
+
+        .info-right {
+            text-align: right;
+            margin-left: 60px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40px;
+        }
+
+        .about-title {
+            font-size: 60px;
+            color: #17a2b8;
+
+        }
+
+        pre {
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+        }
+
+
+        .middle-box-different {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            margin-bottom: 100px;
+        }
+
+        .space-special {
+            padding: 180px;
+        }
+
+        .reviewer-name{
+            font-size: 30px;
+            color: #17a2b8;
+        }
+
+        .test{
+            display:none;
+        }
+
+
+        #footer {
+            display: block;
+            width: 100%;
+            height: 400px;
+            margin-top: 100px;
+            background-color: rgb(16, 56, 106);
+        }
+    </style>
+</head>
+
+
+
+<!-- -------------------------------------- HEADER --------------------------------------- -->
+
+<body>
+    <header>
+        <div class="header-div">
+            <a class="logo" href=""><img width="100px" src="logo.png" alt="See++"></a>
+            <h1 class="company-name">SEE++</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="aboutus.html" target="">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ------------------------------------- First Div -------------------------------------- -->
+    <div class="pictureAndInfo">
+        <div class="middle-box">
+            <div class="info">
+                <span class="wake-up">Wake up!!</span>
+                <br>
+
+                <span class="quote">Are you feeling stressed, emotionally tired, or in crisis?</span>
+                <br>
+                <span class="quote">If you want to find yourself, get the chance to travel the world with us.</span>
+                <br>
+                <span class="quote">So close your eyes, without any plans and enjoy the ride! </span>
+                <span class="quote"></span>
+                <br>
+                <br>
+                <a class="btn btn-info btn-style" href="#signin" target="" role="button">Sort your destination ✈️ </a>
+
+            </div>
+            <div class="space">
+
+            </div>
+            <img width="400px" class="plane-picture" src="plane2.png" alt="_tiagomadeira_" />
+        </div>
+    </div>
+   
+    <h1 class="review-title">💭 Customers Review 💭</h1>
+    <!-- --------------------------------------- Mario Review ---------------------------------------- -->
+    <div class="pictureAndReview">
+        <div class="middle-box-different">
+            <div class="mario-img">
+                <img width="200px" src="mario.jpeg" alt="See++">
+            </div>
+            <div class="space">
+
+            </div>
+            <div class="info-right">
+                <h1 class="reviewer-name">🕷 Mário Vieira</h1>
+                <br>
+                <pre class="quote">"It's funny, I still remember when BOOL used to push me to the limit. 
+                    My escape? Alcohol everyday! 
+                    Finally was able to find SEE++, these guys saved me when I was lost.
+                    Best experience I have ever had so far!"
+
+
+        </pre>
+
+            </div>
+        </div>
+    </div>
+    
+     <!-- ------------------------------------- Graxinha Review -------------------------------------- -->
+    
+     <div class="pictureAndReview">
+        <div class="middle-box-different">
+            <div class="graxinha-img">
+                <img width="200px" src="graxinha.jpeg" alt="See++">
+            </div>
+            <div class="space">
+
+            </div>
+            <div class="info-right">
+                <h1 class="reviewer-name">♦️ Rúben Lima</h1>
+                <br>
+                <pre class="quote">"After leaving the bootcamp, I thought I was ready to face the programming world.
+Couldn't be more wrong.
+I've came into a cycle of depression... started to drink 'Sagres' just like a psycho...
+
+They really saved me! SEE++ took care of everything
+and I was able to meet the love of my life during the trip... "
+
+
+        </pre>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- --------------------------------------- Felipe Review ---------------------------------------- -->
+    <div class="pictureAndReview">
+        <div class="middle-box-different">
+            <div class="felipe-img">
+                <img width="200px" src="felipe.jpeg" alt="See++">
+            </div>
+            <div class="space">
+
+            </div>
+            <div class="info-right">
+                <h1 class="reviewer-name">🧩 Filipe Almeida</h1>
+                <br>
+                <pre class="quote">"Hi, I'm  Filipe.. I love frontend programming.. and that nearly sent me away...
+Thankfully I met this incredible company.
+
+I've booked a trip, and in a matter of minutes
+they had my details and payment confirmed and
+I received an email with the details of the trip.
+If saving me wasn't enough, I was able to meet the love of my life while travelling!"
+
+
+        </pre>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- -------------------------------------- Formulary -------------------------------------- -->
+    <div id="signin" class="container">
+        <h1 class="sign-title">SIGN UP HERE!</h1>
+        <br>
+        <form id="form-div" name = "myform">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" name= "name" placeholder="Name" required>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="id" placeholder="Citizen Number" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Email" required>
+                <small id="emailHelp" class="form-text text-muted" required>We'll never share your email with anyone
+                    else.</small>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                <input type="number" class="form-control" name="day" placeholder="Day to Depart (DD)" required>
+                </div>
+                <div class="col">
+                 <input type="number" class="form-control" name="month" placeholder="Month to Depart (MM)" required> 
+                </div>
+            </div>
+            <br>
+            <h5>Budget</h5>
+            <div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" value= "500" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">500€</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" value= "1000" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">1000€</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline3" name="customRadioInline1" value="1500" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline3">1500€</label>
+                </div>
+            </div>
+            <br>
+            <div id="payment-div" class="test"> 
+                <form id="payment-form" name = "paymentform">
+                    <input type="text" placeholder="Card Owner Name" required>
+                    <input type="number" placeholder="Card Number"required>
+                    <input type="number" placeholder="CVC"required>
+                    <input type="text" placeholder="Expiracy Date"required>
+                </form>
+                </div>
+            </form> 
+            <br>
+            
+            <a href="thanks.html" target=""><button id="submit-btn" class="btn btn-info" type="submit" value= "Submit" target="_blank" role="button">SUBMIT </button></a>
+    </div>  
+
+
+    <!-- --------------------------------------- FOOTER ---------------------------------------- -->
+    <div class="last-box">
+        <div id="footer">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
