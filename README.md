@@ -1,5 +1,4 @@
-# 
-// The Idea
+# // The Idea
 This project is a part of the hackathon session in Academia de Código where we were supposed to create an application which should match with theme song which was given. The theme of our project was on the song called "Wake me up" by Avicii. With the interpretation of the song, we have focused on the existential crisis issues, and with that, we have decided to create a website where people looking for a new life meaning book a random trip according to a selected budget.
 
 // Development
@@ -10,3 +9,4 @@ We were divided into two groups to do the task and we used the Agile Kanban to d
 
 // Tech && Methodologies
 JavaScript, HTML, CSS, Bootstrap, Jquery, Express, Visual Studio Code, Git, Scrum, Kanban
+
